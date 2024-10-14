@@ -30,11 +30,11 @@ export const Cursor: React.FC<Props> = ({}) => {
 	return (
 		<>
 			<motion.div
-				className="hidden md:block fixed h-[500px] w-[500px] cursor z-50 rounded-full pointer-events-none "
+				className=" fixed h-[500px] w-[500px] cursor z-50 rounded-full pointer-events-none "
 				animate={{
 					x: mouse.x,
 					y: mouse.y,
-					mixBlendMode: 'saturation',
+					// mixBlendMode: 'saturation',
 				}}
 				transition={{ type: 'smooth', duration: 0 }}>
 				Cursor

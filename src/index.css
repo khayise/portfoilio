@@ -4,65 +4,66 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: #101933;
+	background-color: #101933;
 }
 
 @layer components {
-  .cursor {
-    background: rgb(34, 58, 154);
-    background: radial-gradient(circle, rgb(121, 151, 208), rgba(16, 26, 51, 1));
-    filter: blur(70px);
-    /* opacity: 0.8; */
-  }
+	.cursor {
+		background: rgb(34, 58, 154);
+		background: radial-gradient(circle, rgb(121, 151, 208), rgba(16, 26, 51, 1));
+		mix-blend-mode: color-dodge;
+		filter: blur(70px);
+		/* opacity: 0.8; */
+	}
 
-  .contact-icon {
-    color: #8396bd;
-    transition: color 200ms;
-  }
+	.contact-icon {
+		color: #8396bd;
+		transition: color 200ms;
+	}
 
-  .contact-icon:hover {
-    color: #c5d0ec;
-    transition: color 200ms;
-  }
+	.contact-icon:hover {
+		color: #c5d0ec;
+		transition: color 200ms;
+	}
 
-  .active-nav--text {
-    @apply text-white;
-  }
+	.active-nav--text {
+		@apply text-white;
+	}
 
-  .active-nav--line {
-    @apply bg-white w-20;
-  }
+	.active-nav--line {
+		@apply bg-white w-20;
+	}
 
-  .nav-link:hover > span {
-    @apply text-white;
-  }
-  .nav-link:hover > div {
-    @apply bg-white w-20;
-  }
+	.nav-link:hover > span {
+		@apply text-white;
+	}
+	.nav-link:hover > div {
+		@apply bg-white w-20;
+	}
 
-  .project-card {
-    @apply cursor-pointer rounded-lg p-4 duration-200;
-  }
+	.project-card {
+		@apply cursor-pointer rounded-lg p-4 duration-200;
+	}
 
-  .project-card--title {
-    @apply duration-200;
-  }
+	.project-card--title {
+		@apply duration-200;
+	}
 
-  .project-card:hover {
-    @apply bg-backHilghligt duration-200;
-  }
+	.project-card:hover {
+		@apply bg-backHilghligt duration-200;
+	}
 
-  .project-card:hover .project-card--title {
-    @apply text-highlightColor duration-200;
-  }
+	.project-card:hover .project-card--title {
+		@apply text-highlightColor duration-200;
+	}
 
-  .__dimmed {
-    @apply opacity-50;
-  }
+	.__dimmed {
+		@apply opacity-50;
+	}
 }
