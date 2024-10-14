@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #101933;
+}
+
+@layer components {
+  .cursor {
+    background: rgb(34, 58, 154);
+    background: radial-gradient(circle, rgb(121, 151, 208), rgba(16, 26, 51, 1));
+    filter: blur(70px);
+    /* opacity: 0.8; */
+  }
+
+  .contact-icon {
+    color: #8396bd;
+    transition: color 200ms;
+  }
+
+  .contact-icon:hover {
+    color: #c5d0ec;
+    transition: color 200ms;
+  }
+
+  .active-nav--text {
+    @apply text-white;
+  }
+
+  .active-nav--line {
+    @apply bg-white w-20;
+  }
+
+  .nav-link:hover > span {
+    @apply text-white;
+  }
+  .nav-link:hover > div {
+    @apply bg-white w-20;
+  }
+
+  .project-card {
+    @apply cursor-pointer rounded-lg p-4 duration-200;
+  }
+
+  .project-card--title {
+    @apply duration-200;
+  }
+
+  .project-card:hover {
+    @apply bg-backHilghligt duration-200;
+  }
+
+  .project-card:hover .project-card--title {
+    @apply text-highlightColor duration-200;
+  }
+
+  .__dimmed {
+    @apply opacity-50;
+  }
+}
