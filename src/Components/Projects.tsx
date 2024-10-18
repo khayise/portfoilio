@@ -26,7 +26,7 @@ export const Projects: React.FC<Props> = ({}) => {
 					}}
 					viewport={{ once: true, amount: 0.1 }}
 					transition={{ duration: 0.6, type: 'tween' }}
-					className="mt-20 overflow-hidden"
+					className="mt-20"
 					ref={ref}>
 					<ul className="">
 						{projects.map((project, index) => {
