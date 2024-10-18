@@ -66,4 +66,12 @@ body {
 	.__dimmed {
 		@apply opacity-50;
 	}
+
+	.unactive-lang {
+		@apply text-baseColor opacity-50 duration-200;
+	}
+
+	.active-lang {
+		@apply text-highlightColor font-bold duration-200;
+	}
 }

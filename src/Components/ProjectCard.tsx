@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { IProject } from '../assets/Projects';
+import { LangContext } from '../App';
 
 interface Props {
 	project: IProject;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export const ProjectCard: React.FC<Props> = ({ project, index, hoveredIndex, setHoveredIndex }) => {
+	const LanguageContext = useContext(LangContext);
 	return (
 		<li
 			onMouseEnter={() => setHoveredIndex(index)}
@@ -27,12 +29,16 @@ export const ProjectCard: React.FC<Props> = ({ project, index, hoveredIndex, set
 						<span className="font-medium text-lg project-card--title text-accentColor">
 							{project.title}
 						</span>
-						<p className="mt-1 text-sm text-baseColor">{project.text}</p>
+						<p className="mt-1 text-sm text-baseColor">
+							{project.text[LanguageContext?.activeLanguage!]}
+						</p>
 						{project.technologys && (
 							<ul className="flex gap-2 mt-5 items-center flex-wrap">
 								{project.technologys.map((tech) => {
 									return (
-										<li className="px-2 py-1 rounded-2xl bg-backAccent flex items-center">
+										<li
+											key={tech}
+											className="px-2 py-1 rounded-2xl bg-backAccent flex items-center">
 											<span className="text-highlightColor text-xs text-nowrap">{tech}</span>
 										</li>
 									);
