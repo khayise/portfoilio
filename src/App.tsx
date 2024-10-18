@@ -40,7 +40,7 @@ function App() {
 					<div className="bg-back flex flex-col md:flex-row justify-between px-12 md:px-24">
 						<Cursor />
 						<SideHeader />
-						<main className="md:pt-24 overflow-hidden w-full md:w-1/2 h-[200vh]">
+						<main className="md:pt-24 w-full md:w-1/2 h-[200vh]">
 							<About />
 							<Projects />
 						</main>
