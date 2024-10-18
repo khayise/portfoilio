@@ -18,7 +18,7 @@ export const Projects: React.FC<Props> = ({}) => {
 				<motion.section
 					initial={{
 						opacity: 0,
-						x: 300,
+						x: 100,
 					}}
 					whileInView={{
 						opacity: 1,
