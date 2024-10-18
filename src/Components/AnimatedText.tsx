@@ -67,8 +67,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({ text, classNames, as
 					transition={{ type: 'spring', duration: 2 }}
 					key={text}
 					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					exit={{ opacity: 0 }}>
+					animate={{ opacity: 1 }}>
 					{text}
 				</motion.h2>
 			</>
