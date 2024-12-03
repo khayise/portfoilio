@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { IProject } from '../assets/Projects';
 import { LangContext } from '../App';
+import { motion } from 'framer-motion';
 
 interface Props {
 	project: IProject;
@@ -11,10 +12,33 @@ interface Props {
 
 export const ProjectCard: React.FC<Props> = ({ project, index, hoveredIndex, setHoveredIndex }) => {
 	const LanguageContext = useContext(LangContext);
+
+	const handleMouseEnter = (index: number) => {
+		if (/Mobi|Android/i.test(navigator.userAgent)) {
+			setHoveredIndex(index);
+		}
+	};
+
+	const handleMouseLeave = () => {
+		if (/Mobi|Android/i.test(navigator.userAgent)) {
+			setHoveredIndex(null);
+		}
+	};
+
 	return (
-		<li
-			onMouseEnter={() => setHoveredIndex(index)}
-			onMouseLeave={() => setHoveredIndex(null)}
+		<motion.li
+			initial={{
+				opacity: 0,
+				x: 100,
+			}}
+			whileInView={{
+				opacity: 1,
+				x: 0,
+			}}
+			transition={{ type: 'tween' }}
+			viewport={{ once: true, amount: 0.6, margin: '80px' }}
+			onMouseEnter={() => handleMouseEnter(index)}
+			onMouseLeave={handleMouseLeave}
 			className={`${hoveredIndex !== null && hoveredIndex !== index ? '__dimmed' : ''} duration-200 mt-7`}>
 			<a href={project.link} target="_blank" rel="noopener noreferrer">
 				<div className="project-card flex flex-col md:flex-row items-start md:gap-5">
@@ -48,6 +72,6 @@ export const ProjectCard: React.FC<Props> = ({ project, index, hoveredIndex, set
 					</div>
 				</div>
 			</a>
-		</li>
+		</motion.li>
 	);
 };

@@ -7,6 +7,18 @@ interface IMouse {
 	y: number;
 }
 
+function debounce<T extends unknown[]>(callback: (...args: T) => void, delay: number) {
+	let timerId: number | ReturnType<typeof setTimeout> | null = null;
+
+	return (...args: T) => {
+		if (timerId) {
+			clearTimeout(timerId);
+		}
+
+		timerId = setTimeout(() => callback(...args), delay);
+	};
+}
+
 export const Cursor: React.FC<Props> = ({}) => {
 	const [mouse, setMouse] = useState<IMouse>({
 		x: 0,
@@ -14,12 +26,13 @@ export const Cursor: React.FC<Props> = ({}) => {
 	});
 
 	useEffect(() => {
-		const positionHandler = (e: MouseEvent) => {
+		const move = (e: MouseEvent) => {
 			setMouse({
 				x: e.clientX - 250,
 				y: e.clientY - 250,
 			});
 		};
+		const positionHandler = debounce(move, 1);
 
 		window.addEventListener('mousemove', positionHandler);
 
@@ -36,7 +49,7 @@ export const Cursor: React.FC<Props> = ({}) => {
 					y: mouse.y,
 					// mixBlendMode: 'saturation',
 				}}
-				transition={{ type: 'smooth', duration: 0 }}>
+				transition={{ type: 'spring', duration: 0.5 }}>
 				Cursor
 			</motion.div>
 		</>

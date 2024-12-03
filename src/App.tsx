@@ -37,7 +37,7 @@ function App() {
 			<LangContext.Provider value={{ activeLanguage, setActiveLanguage }}>
 				<NavigationContext.Provider value={{ activeNav, setActiveNav }}>
 					<LanguageToggle />
-					<div className="bg-back flex overflow-hidden flex-col md:flex-row justify-between px-12 md:px-24">
+					<div className="bg-back flex  flex-col md:flex-row justify-between px-12 md:px-24">
 						<Cursor />
 						<SideHeader />
 						<main className="md:pt-24 w-full md:w-1/2">
