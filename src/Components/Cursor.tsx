@@ -28,8 +28,8 @@ export const Cursor: React.FC<Props> = ({}) => {
 	useEffect(() => {
 		const move = (e: MouseEvent) => {
 			setMouse({
-				x: e.clientX - 250,
-				y: e.clientY - 250,
+				x: e.clientX - 325,
+				y: e.clientY - 325,
 			});
 		};
 		const positionHandler = debounce(move, 1);
