@@ -7,17 +7,17 @@ interface IMouse {
 	y: number;
 }
 
-function debounce<T extends unknown[]>(callback: (...args: T) => void, delay: number) {
-	let timerId: number | ReturnType<typeof setTimeout> | null = null;
+// function debounce<T extends unknown[]>(callback: (...args: T) => void, delay: number) {
+// 	let timerId: number | ReturnType<typeof setTimeout> | null = null;
 
-	return (...args: T) => {
-		if (timerId) {
-			clearTimeout(timerId);
-		}
+// 	return (...args: T) => {
+// 		if (timerId) {
+// 			clearTimeout(timerId);
+// 		}
 
-		timerId = setTimeout(() => callback(...args), delay);
-	};
-}
+// 		timerId = setTimeout(() => callback(...args), delay);
+// 	};
+// }
 
 function trottle<T extends unknown[]>(callback: (...args: T) => void, delay: number = 1000) {
 	let shouldWait: boolean = false;
