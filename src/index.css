@@ -48,7 +48,7 @@ body {
 	}
 
 	.project-card {
-		@apply cursor-pointer rounded-lg p-4 duration-200;
+		@apply p-4 rounded-lg duration-200 cursor-pointer;
 	}
 
 	.project-card--title {
@@ -68,10 +68,18 @@ body {
 	}
 
 	.unactive-lang {
-		@apply text-baseColor opacity-50 duration-200;
+		@apply opacity-50 text-baseColor duration-200;
 	}
 
 	.active-lang {
-		@apply text-highlightColor font-bold duration-200;
+		@apply font-bold text-highlightColor duration-200;
+	}
+
+	.glass-background {
+		background: rgba(88, 229, 177, 0.51);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5.2px);
+		-webkit-backdrop-filter: blur(5.2px);
+		border: 1px solid rgba(88, 229, 177, 1);
 	}
 }
