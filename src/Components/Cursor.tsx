@@ -19,6 +19,29 @@ function debounce<T extends unknown[]>(callback: (...args: T) => void, delay: nu
 	};
 }
 
+function trottle<T extends unknown[]>(callback: (...args: T) => void, delay: number = 1000) {
+	let shouldWait: boolean = false;
+	let waitingArgs: null | T = null;
+
+	return (...args: T) => {
+		if (shouldWait) {
+			waitingArgs = args;
+			return;
+		}
+
+		callback(...args);
+
+		shouldWait = true;
+		setTimeout(() => {
+			shouldWait = false;
+			if (waitingArgs !== null) {
+				callback(...waitingArgs);
+				waitingArgs = null;
+			}
+		}, delay);
+	};
+}
+
 export const Cursor: React.FC<Props> = ({}) => {
 	const [mouse, setMouse] = useState<IMouse>({
 		x: 0,
@@ -32,7 +55,7 @@ export const Cursor: React.FC<Props> = ({}) => {
 				y: e.clientY - 325,
 			});
 		};
-		const positionHandler = debounce(move, 1);
+		const positionHandler = trottle(move, 20);
 
 		window.addEventListener('mousemove', positionHandler);
 
@@ -40,16 +63,19 @@ export const Cursor: React.FC<Props> = ({}) => {
 			window.removeEventListener('mousemove', positionHandler);
 		};
 	}, []);
+
+	if (/Mobi|Android/i.test(navigator.userAgent)) return null;
+
 	return (
 		<>
 			<motion.div
-				className="hidden md:block fixed h-[500px] w-[500px] cursor z-50 rounded-full pointer-events-none "
+				className="md:block z-50 fixed hidden rounded-full w-[500px] h-[500px] pointer-events-none cursor"
 				animate={{
 					x: mouse.x,
 					y: mouse.y,
 					// mixBlendMode: 'saturation',
 				}}
-				transition={{ type: 'spring', duration: 0.5 }}>
+				transition={{ type: 'tween', duration: 0.5 }}>
 				Cursor
 			</motion.div>
 		</>

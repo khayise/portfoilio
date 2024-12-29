@@ -37,7 +37,7 @@ function App() {
 			<LangContext.Provider value={{ activeLanguage, setActiveLanguage }}>
 				<NavigationContext.Provider value={{ activeNav, setActiveNav }}>
 					<LanguageToggle />
-					<div className="bg-back flex  flex-col md:flex-row justify-between px-12 md:px-24">
+					<div className="flex md:flex-row flex-col justify-between bg-back px-12 md:px-24">
 						<Cursor />
 						<SideHeader />
 						<main className="md:pt-24 w-full md:w-1/2">
@@ -45,7 +45,7 @@ function App() {
 							<Projects />
 						</main>
 					</div>
-					<div className="h-20 bg-back"></div>
+					<div className="bg-back h-20"></div>
 					{/* second screen */}
 				</NavigationContext.Provider>
 			</LangContext.Provider>
