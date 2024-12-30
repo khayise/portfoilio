@@ -39,7 +39,7 @@ export const DownloadCVModal: React.FC<DownloadCVModalProps> = ({ handleClose })
 					transition: { delay: durationOrDelay, duration: durationOrDelay },
 				}}
 				transition={{ duration: durationOrDelay }}
-				className="top-0 left-0 fixed place-items-center place-content-center bg-black bg-opacity-50 gird">
+				className="top-0 left-0 fixed flex justify-center items-center bg-black bg-opacity-50">
 				<motion.div
 					onClick={(e) => e.stopPropagation()}
 					initial={{
