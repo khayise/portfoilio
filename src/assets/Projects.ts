@@ -9,17 +9,37 @@ export interface IProject {
 
 const projects: IProject[] = [
 	{
+		title: 'Lethai cars',
+		text: {
+			EN: `Lethai cars is a SPA Car Rental Web Application.
+			Here I created the interface using React with TypeScript,
+			implemented dynamic filtering and search by parameters: price, model, rental location and
+			developed a cost calculation feature. I integrated also a Mongo DB database to 
+			keep whole information on the cloud.
+			To increase a speed of development I have used a component library "Ant Design"`,
+			DE: `Lethai Cars ist eine SPA-Webanwendung für die Autovermietung.
+				Hier habe ich die Benutzeroberfläche mit React und TypeScript erstellt,
+				dynamische Filterung und Suche nach Parametern wie Preis, Modell
+				 und Mietstandort implementiert sowie eine Kostenberechnungsfunktion entwickelt.
+				Ich habe auch eine MongoDB-Datenbank integriert, um alle Informationen in der Cloud zu speichern.
+				Um die Entwicklungsgeschwindigkeit zu erhöhen, habe ich die Komponentenbibliothek "Ant Design" verwendet.`,
+		},
+		img: 'https://pbs.twimg.com/media/GgtHDGoWMAA17Md?format=jpg&name=4096x4096',
+		link: 'https://lethai-cars.vercel.app/',
+		technologys: ['React', 'Ant Design', 'Mongo DB', 'Zustand', 'React Query'],
+	},
+	{
 		title: 'ReactPizza',
 		text: {
-			EN: `Welcome to React Pizza, the ultimate destination for pizza lovers
-				in the heart of New York City! Our passion for crafting the perfect pizza shines through in
-				every bite. At React Pizza, we believe that great pizza starts with the freshest ingredients,
-				a secret blend of spices, and a love for traditional recipes combined with modern techniques.`,
+			EN: `By developing this app I created a landing page and an online ordering system using React,
+			implemented state management for the cart using Redux Toolkit,
+			developed a module for selecting toppings and calculating the final order cost and
+			set up order submission to the server via API.`,
 
-			DE: `Willkommen bei React Pizza, dem ultimativen Ziel für Pizzaliebhaber im Herzen von New York City!
-				Unsere Leidenschaft für die Zubereitung der perfekten Pizza spiegelt sich in jedem Bissen wider.
-				Bei React Pizza sind wir überzeugt, dass großartige Pizza mit den frischesten Zutaten, einer geheimen
-				Gewürzmischung und der Liebe zu traditionellen Rezepten in Kombination mit modernen Techniken beginnt.`,
+			DE: `Durch die Entwicklung dieser App habe ich eine Landingpage und ein Online-Bestellsystem mit React erstellt,
+			die Zustandsverwaltung des Warenkorbs mit Redux Toolkit implementiert,
+			ein Modul für die Auswahl von Belägen und die Berechnung der endgültigen Bestellkosten entwickelt und
+			die Übermittlung von Bestellungen an den Server über eine API eingerichtet.`,
 		},
 		img: 'https://www.tageskarte.io/fileadmin/content/_processed_/b/5/csm_Dodo_3e7bd71d2b.jpg',
 		technologys: ['React', 'Redux', 'Node JS', 'Express', 'MongoDB'],
