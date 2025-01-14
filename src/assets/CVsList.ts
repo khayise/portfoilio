@@ -13,7 +13,7 @@ export const CVsList: ICV[] = [
 	{
 		language: 'DE',
 		href: 'https://www.dropbox.com/scl/fi/0063whc6ihvvtfuttryjm/Frontend-entwickler-Andrii-Dedesh.pdf?rlkey=atwmloy8x14bjkq9ltwavoknz&st=7g6yv621&dl=1',
-		disabled: true,
+		disabled: false,
 	},
 	{
 		language: 'RUS',
