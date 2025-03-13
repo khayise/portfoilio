@@ -9,6 +9,21 @@ export interface IProject {
 
 const projects: IProject[] = [
 	{
+		title: 'Crypto Check',
+		text: {
+			EN: `Crypto Check is a bot for the Telegram messenger that helps
+			users receive notifications about the current state of the cryptocurrency market.
+			Users can either request up-to-date information at any time or subscribe
+			to the bot’s newsletter and receive notifications at their chosen time.`,
+			DE: `Crypto Check ist ein Bot für den Messenger Telegram, der den Nutzern hilft,
+			Benachrichtigungen über den aktuellen Stand des Kryptowährungsmarktes zu erhalten.
+			Die Nutzer können entweder jederzeit aktuelle Informationen abrufen
+			oder den Bot-Newsletter abonnieren und Benachrichtigungen zu ihrer gewählten Zeit erhalten.`,
+		},
+		img: 'https://pbs.twimg.com/media/Gl6kVoqXcAAUnt1?format=png&name=240x240',
+		link: 'https://t.me/crptcheck_bot',
+	},
+	{
 		title: 'Lethai cars',
 		text: {
 			EN: `Lethai cars is a SPA Car Rental Web Application.
