@@ -7,7 +7,7 @@ export const HandEmoji: React.FC<HandEmojiProps> = ({}) => {
 	return (
 		<>
 			<motion.div
-				className="inline-block"
+				className="inline-block origin-bottom-right"
 				initial={{ rotate: 0 }}
 				animate={{ rotate: [0, 25, -20, 0] }}
 				transition={{
