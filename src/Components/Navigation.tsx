@@ -15,10 +15,14 @@ export const Navigation: React.FC<Props> = ({}) => {
 					linkTo="about"
 				/>
 				<NavigationElement
+					text={navigationTexts.experience[LanguageContext?.activeLanguage!]}
+					linkTo="experience"
+				/>
+				<NavigationElement
 					text={navigationTexts.projects[LanguageContext?.activeLanguage!]}
 					linkTo="projects"
 				/>
-			</nav>{' '}
+			</nav>
 		</>
 	);
 };

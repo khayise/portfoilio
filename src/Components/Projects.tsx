@@ -15,6 +15,7 @@ export const Projects: React.FC<Props> = ({}) => {
 		<>
 			<Element name="projects">
 				<section className="mt-20" ref={ref}>
+					<h1>Projects</h1>
 					<ul className="overflow-hidden">
 						{projects.map((project, index) => {
 							return (

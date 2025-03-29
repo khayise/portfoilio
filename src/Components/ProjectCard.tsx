@@ -14,13 +14,13 @@ export const ProjectCard: React.FC<Props> = ({ project, index, hoveredIndex, set
 	const LanguageContext = useContext(LangContext);
 
 	const handleMouseEnter = (index: number) => {
-		if (/Mobi|Android/i.test(navigator.userAgent)) {
+		if (!/Mobi|Android/i.test(navigator.userAgent)) {
 			setHoveredIndex(index);
 		}
 	};
 
 	const handleMouseLeave = () => {
-		if (/Mobi|Android/i.test(navigator.userAgent)) {
+		if (!/Mobi|Android/i.test(navigator.userAgent)) {
 			setHoveredIndex(null);
 		}
 	};
@@ -29,18 +29,21 @@ export const ProjectCard: React.FC<Props> = ({ project, index, hoveredIndex, set
 		<motion.li
 			initial={{
 				opacity: 0,
-				x: 100,
+				scale: 0.9,
 			}}
 			whileInView={{
 				opacity: 1,
-				x: 0,
+				scale: 1,
 			}}
-			transition={{ type: 'tween' }}
-			viewport={{ once: true, amount: 0.6, margin: '40px' }}
+			transition={{ type: 'spring' }}
+			viewport={{ once: true, amount: 0.6 }}
 			onMouseEnter={() => handleMouseEnter(index)}
-			onMouseLeave={handleMouseLeave}
-			className={`${hoveredIndex !== null && hoveredIndex !== index ? '__dimmed' : ''} duration-200 mt-7`}>
-			<a href={project.link} target="_blank" rel="noopener noreferrer">
+			onMouseLeave={handleMouseLeave}>
+			<a
+				className={`${hoveredIndex !== null && hoveredIndex !== index ? '__dimmed' : ''} duration-200 mt-7`}
+				href={project.link}
+				target="_blank"
+				rel="noopener noreferrer">
 				<div className="flex md:flex-row flex-col items-start md:gap-5 project-card">
 					<div className="mt-1 h-24">
 						<img
@@ -50,9 +53,7 @@ export const ProjectCard: React.FC<Props> = ({ project, index, hoveredIndex, set
 						/>
 					</div>
 					<div className="">
-						<span className="font-medium text-accentColor text-lg project-card--title">
-							{project.title}
-						</span>
+						<h2 className="title">{project.title}</h2>
 						<p className="mt-1 text-sm text-baseColor">
 							{project.text[LanguageContext?.activeLanguage!]}
 						</p>

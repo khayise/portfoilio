@@ -4,6 +4,7 @@ import { Cursor } from './Components/Cursor';
 import { SideHeader } from './Components/SideHeader';
 import { Projects } from './Components/Projects';
 import { LanguageToggle } from './Components/LanguageToggle';
+import { Experience } from './modules/Experience/Experience';
 
 interface NavigationContext {
 	activeNav: string;
@@ -37,11 +38,12 @@ function App() {
 			<LangContext.Provider value={{ activeLanguage, setActiveLanguage }}>
 				<NavigationContext.Provider value={{ activeNav, setActiveNav }}>
 					<LanguageToggle />
-					<div className="flex md:flex-row flex-col justify-between bg-back px-12 md:px-24">
+					<div className="flex md:flex-row flex-col justify-between gap-40 md:gap-10 bg-back px-12 md:px-24">
 						<Cursor />
 						<SideHeader />
-						<main className="md:pt-24 w-full md:w-1/2">
+						<main className="flex flex-col gap-20 md:pt-24 w-full md:w-1/2">
 							<About />
+							<Experience />
 							<Projects />
 						</main>
 					</div>

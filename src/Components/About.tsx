@@ -19,7 +19,7 @@ export const About: React.FC<Props> = ({}) => {
 				<motion.section
 					initial={{
 						opacity: 0,
-						x: 100,
+						y: -100,
 					}}
 					whileInView={{
 						opacity: 1,
@@ -30,17 +30,17 @@ export const About: React.FC<Props> = ({}) => {
 					ref={ref}
 					className="text-baseColor">
 					<AnimatedBlock trigger={LanguageContext?.activeLanguage!}>
-						<h1 className="text-3xl mb-2 text-accentColor">
+						<h1 className="mb-2 text-accentColor text-3xl">
 							{aboutText.gretting[LanguageContext?.activeLanguage!]}
 							<HandEmoji />
 						</h1>
 
-						<h2 className="text-xl text-accentColor">
+						<h2 className="text-accentColor text-xl">
 							{aboutText.myName[LanguageContext?.activeLanguage!]}
 						</h2>
 						<p>{aboutText.aboutMe[LanguageContext?.activeLanguage!]}</p>
 
-						<h2 className="text-xl mt-4 text-accentColor">
+						<h2 className="mt-4 text-accentColor text-xl">
 							{aboutText.techList.title[LanguageContext?.activeLanguage!]}
 						</h2>
 

@@ -82,4 +82,12 @@ body {
 		-webkit-backdrop-filter: blur(5.2px);
 		border: 1px solid rgba(88, 229, 177, 1);
 	}
+
+	.title {
+		@apply font-medium text-accentColor text-lg project-card--title;
+	}
+
+	h1 {
+		@apply font-medium text-accentColor text-2xl;
+	}
 }

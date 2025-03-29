@@ -3,6 +3,10 @@ export const navigationTexts = {
 		EN: 'ABOUT',
 		DE: 'ÜBER MICH',
 	},
+	experience: {
+		EN: 'EXPERIENCE',
+		DE: 'ERFAHRUNG',
+	},
 	projects: {
 		EN: 'PROJECTS',
 		DE: 'PROJEKTE',
