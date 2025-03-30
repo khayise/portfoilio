@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { LangContext, TLanguage } from '../App';
+import { LangContext, TLanguage } from '../../../App';
 import { LanguageUnderline } from './LanguageUnderline';
 
 interface LanguageButtonProps {

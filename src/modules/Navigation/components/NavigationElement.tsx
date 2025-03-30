@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { NavigationContext } from '../App';
+import { NavigationContext } from '../../../App';
 
 import { Link } from 'react-scroll';
-import { AnimatedText } from './AnimatedText';
+import { AnimatedText } from '../../../components/AnimatedText';
 
 interface Props {
 	text: string;

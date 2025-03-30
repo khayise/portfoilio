@@ -1,9 +1,9 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { About } from './Components/About';
-import { Cursor } from './Components/Cursor';
-import { SideHeader } from './Components/SideHeader';
-import { Projects } from './Components/Projects';
-import { LanguageToggle } from './Components/LanguageToggle';
+import { About } from './modules/About/About';
+import { Cursor } from './components/Cursor';
+import { SideHeader } from './components/SideHeader';
+import { Projects } from './modules/Projects/Projects';
+import { LanguageToggle } from './modules/Language/LanguageToggle';
 import { Experience } from './modules/Experience/Experience';
 
 interface NavigationContext {

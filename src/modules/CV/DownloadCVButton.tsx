@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { downloadCVButtonTexts } from '../assets/Texts/DownloadCVButtonTexts';
+import { downloadCVButtonTexts } from '../../assets/Texts/DownloadCVButtonTexts';
 
-import { LangContext } from '../App';
-import { DownloadCVModal } from './DownloadCVModal';
+import { LangContext } from '../../App';
+import { DownloadCVModal } from './components/DownloadCVModal';
 
 interface DownloadCVButtonProps {}
 

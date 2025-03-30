@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useObserver } from '../Hooks';
+import { useObserver } from '../../Hooks';
 import { Element } from 'react-scroll';
-import { ProjectCard } from './ProjectCard';
+import { ProjectCard } from './components/ProjectCard';
 
-import projects from '../assets/Projects';
+import projects from '../../assets/Projects';
 
 interface Props {}
 

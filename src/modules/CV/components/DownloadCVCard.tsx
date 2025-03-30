@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { ICV } from '../assets/CVsList';
-import { useActiveCVStore } from '../stores/activeCVStore';
+import { ICV } from '../../../assets/CVsList';
+import { useActiveCVStore } from '../../../stores/activeCVStore';
 
 interface DownloadCVCardProps {
 	CV: ICV;

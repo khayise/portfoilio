@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { NavigationElement } from './NavigationElement';
-import { LangContext } from '../App';
-import { navigationTexts } from '../assets/Texts/NavigationTexts';
+import { NavigationElement } from './components/NavigationElement';
+import { LangContext } from '../../App';
+import { navigationTexts } from '../../assets/Texts/NavigationTexts';
 
 interface Props {}
 

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { IProject } from '../assets/Projects';
-import { LangContext } from '../App';
+import { IProject } from '../../../assets/Projects';
+import { LangContext } from '../../../App';
 import { motion } from 'framer-motion';
 
 interface Props {

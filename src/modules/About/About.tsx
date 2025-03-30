@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
 import { motion } from 'framer-motion';
-import { aboutText } from '../assets/Texts/AboutTexts';
-import { LangContext } from '../App';
+import { aboutText } from '../../assets/Texts/AboutTexts';
+import { LangContext } from '../../App';
 
-import { useObserver } from '../Hooks';
-import { HandEmoji } from './HandEmoji';
-import { AnimatedBlock } from './AnimatedBlock';
+import { useObserver } from '../../Hooks';
+import { HandEmoji } from '../../components/HandEmoji';
+import { AnimatedBlock } from '../../components/AnimatedBlock';
 
 interface Props {}
 

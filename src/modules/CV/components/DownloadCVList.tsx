@@ -1,5 +1,5 @@
 import React from 'react';
-import { CVsList } from '../assets/CVsList';
+import { CVsList } from '../../../assets/CVsList';
 import { DownloadCVCard } from './DownloadCVCard';
 
 interface DownloadCVListProps {}

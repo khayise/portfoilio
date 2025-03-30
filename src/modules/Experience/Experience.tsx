@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import { useObserver } from '../../Hooks';
 import { Element } from 'react-scroll';
-import { ExperienceCard } from '../components/ExperienceCard';
-import { AnimatedBlock } from '../../Components/AnimatedBlock';
+import { ExperienceCard } from './components/ExperienceCard';
 import { LangContext } from '../../App';
 import { experience } from '../../assets/Experience';
+import { AnimatedBlock } from '../../components/AnimatedBlock';
 
 interface ExperienceProps {}
 
-export const Experience: React.FC<ExperienceProps> = ({}) => {
+export const Experience: React.FC<ExperienceProps> = React.memo(({}) => {
 	const LanguageContext = useContext(LangContext);
 	const ref = useObserver('experience');
 	return (
@@ -27,4 +27,4 @@ export const Experience: React.FC<ExperienceProps> = ({}) => {
 			</AnimatedBlock>
 		</>
 	);
-};
+});
