@@ -4,7 +4,6 @@ import { headerText } from '../assets/Texts/HeaderTexts';
 
 import { LangContext } from '../App';
 import { AnimatedText } from './AnimatedText';
-import { DownloadCVButton } from '../modules/CV/DownloadCVButton';
 import { Navigation } from '../modules/Navigation/Navigation';
 import { Contacts } from '../modules/Contacts/Contacts';
 
