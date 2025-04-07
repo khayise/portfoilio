@@ -9,7 +9,7 @@ export const Navigation: React.FC<Props> = ({}) => {
 	const LanguageContext = useContext(LangContext);
 	return (
 		<>
-			<nav className="flex flex-col gap-y-3">
+			<nav className="flex flex-col gap-y-3 mt-10">
 				<NavigationElement
 					text={navigationTexts.about[LanguageContext?.activeLanguage!]}
 					linkTo="about"
