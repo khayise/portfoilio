@@ -6,7 +6,7 @@ import { LangContext } from '../App';
 import { AnimatedText } from './AnimatedText';
 import { DownloadCVButton } from '../modules/CV/DownloadCVButton';
 import { Navigation } from '../modules/Navigation/Navigation';
-import { Contacts } from './Contacts';
+import { Contacts } from '../modules/Contacts/Contacts';
 
 interface Props {}
 
@@ -22,7 +22,7 @@ export const SideHeader: React.FC<Props> = ({}) => {
 						classNames="text-accentColor font-main text-xl font-light mt-3"
 						text={headerText.developer[LanguageContext?.activeLanguage!]}
 					/>
-					<DownloadCVButton />
+					{/* <DownloadCVButton /> */}
 					<Navigation />
 				</div>
 				<Contacts />
